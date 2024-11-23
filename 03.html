@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+<script>
+    //PROBLEMA
+    //Considere a lista de números abaixo:
+    // let listaDeNumeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    //Separe os números pares e os números ímpares em listas distintas e apresente as listas de forma crescente e forma descrescente.
+
+    //ENTRADA
+    let listaDeNumeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    //PROCESSAMENTO
+    let pares = [];
+    let impares = [];
+
+    for (let number of listaDeNumeros) {
+        if (number % 2 === 0) {
+            pares.push(number);
+        } else {
+            impares.push(number)
+        }
+    }
+
+    let paresCrescente = pares.slice().sort((a, b) => a - b);
+    let paresDecrescente = pares.slice().sort((a, b) => b - a);
+   
+    let imparesCrescente = impares.slice().sort((a, b) => a - b);
+    let imparesDecrescente = impares.slice().sort((a, b) => b - a);
+    
+    //SAÍDA
+
+    document.write(`Lista números pares (crescente): ${paresCrescente.join(" , ")}<br>
+    Lista de números pares (decrescente): ${paresDecrescente.join(" , ")}<br>
+    Lista de números ímpares (crescente): ${imparesCrescente.join(" , ")}<br>
+    Lista de números ímpares (decrescente): ${imparesDecrescente.join(" , ")}`);
+
+</script>
