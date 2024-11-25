@@ -9,8 +9,17 @@
     let listaDeNomes = ["Amanda", "Eduardo", "Fábio", "Evelin", "César", "José", "Ivo", "Eva", "Otávio", "Inez", "Osmar", "Ulisses"];
 
     //PROCESSAMENTO
-    
-    
+    let vogaisNomes = [];
+
+    for (let name of listaDeNomes) {
+        let firstLetter = name[0]
+        if ("AEIOU".includes(firstLetter)) {
+            vogaisNomes.push(name);
+        }
+    }   
+
+    vogaisNomes.sort();
     //SAÍDA
+    document.write(`Nomes que começam com vogais em ordem alfabética:<br> ${vogaisNomes.join(" , ")}`)
 
 </script>
